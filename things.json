@@ -1,0 +1,31 @@
+[{
+    "category": "Human",
+    "name": "My Fiancée",
+    "image": "niki.jpg",
+    "description": "My favorite person is Niki. Our wedding is in July, feel free to join us and bring lots of gifts."
+  },
+  {
+    "category": "Food",
+    "name": "Cheese Curds",
+    "image": "curds.jpg",
+    "description": "One of my favorite foods is deep fried cheese curds. I grew up in Wisconsin, so it makes sense."
+  },
+  {
+    "category": "Video Game",
+    "name": "Super Mario World",
+    "image": "mario.jpg",
+    "description": "Super Mario World for Super Nintendo was my favorite game as a kid and still is."
+  },
+  {
+    "category": "Frisbee",
+    "name": "Discmania P2",
+    "image": "frisbees.jpg",
+    "description": "The P2 is my favorite disc. It is a putter made by discmania. The Spanish pronunciation of the name is \"PeDos\" which translates to farts."
+  },
+  {
+    "category": "Weather",
+    "name": "Partly Cloudly, High of 77&deg;F",
+    "image": "weather.jpg",
+    "description": "I'm a big fan of big floaty puffy clouds. Also warm weather."
+  }
+]

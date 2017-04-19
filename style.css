@@ -1,0 +1,160 @@
+/* Kenner's Favorite Things */
+
+* {box-sizing: border-box;}
+
+html {
+  background-color: #fdffff;
+  color: rgba(0,0,0,0.8);
+  font: 16px/1 "Roboto", "Helvetica Neue", "Calibri Light", sans-serif;
+  letter-spacing: 0.05rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+h1, h2, h3, h4, h5, p {margin: 0;}
+h1 {font-size: 3rem;}
+h2 {font-size: 2rem;}
+h3 {font-size: 1.75rem;}
+h4 {font-size: 1.5rem;}
+h5 {font-size: 1.25rem;}
+p {line-height: 1.5}
+code {
+  font: 0.875rem "Roboto Mono", sans-serif;
+  background-color: #FFEEF3;
+}
+.link {
+  cursor: pointer;
+  color: #FF6880;
+}
+.link:hover, .link:focus {text-decoration: underline;}
+
+main {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+}
+
+.hero {
+  width: 100%;
+  min-height: 10rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: rgba(255,255,255,0.97);
+  letter-spacing: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.44);
+
+  background-image: url("images/hero-background.jpg");
+  background-color: #7dbcc9;
+  background-blend-mode: overlay;
+
+  outline: 0.25rem solid rgba(255,255,255,0.97);
+  outline-offset: -1.25rem;
+}
+
+.intro {margin-bottom: 2rem;}
+
+.intro p {
+  flex: 100%;
+  margin-bottom: 1rem;
+}
+/* Buttons */
+.intro .btn {
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  background-color: #fdffff;
+  border: 0.125rem solid rgba(0,0,0,0.8);
+  position: relative;
+  transition: 250ms;
+}
+.intro .btn:hover, .intro .btn:focus {background-color: #FDC1D3;}
+.intro .btn::before, .intro .btn::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 0.75rem);
+  top: 68%;
+  border: 0.75rem solid transparent;
+  transition: all 400ms, border-color 250ms;
+  z-index: -1;
+}
+.intro .btn::after {z-index: 2;}
+.intro .btn.active::before {
+  top: 100%;
+  border-top-color: rgba(0,0,0,0.8);
+}
+.intro .btn.active::after {
+  top: 90%;
+  border-top-color: #fdffff;
+}
+.intro .btn.active:hover::after,
+.intro .btn.active:focus::after,
+.intro .btn.active:hover::after,
+.intro .btn.active:focus::after {
+  border-top-color: #FDC1D3;
+}
+
+.intro, .things {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.things article {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.things article>*:first-child {
+  height: 20rem;
+  display: flex;
+  position: relative;
+  background-image: url("images/hero-background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.things article>*:first-child>* {
+  margin: auto auto 0.25rem;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.97);
+  text-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.44);
+}
+
+.things article>*~* {
+  padding: 3rem 4rem 4rem;
+  border: 0.25rem solid rgba(0,0,0,0.8);
+  border-bottom: none;
+}
+
+.overlay {
+  position: fixed;
+  background-color: #fdffff;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+}
+
+.overlay section {
+  max-width: 37.5rem;
+  padding: 0 0.75rem;
+  position: relative;
+}
+
+.overlay section>* {margin-bottom: 1rem;}
+.hidden {display: none;}

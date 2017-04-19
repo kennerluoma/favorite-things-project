@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>A Favorite Thing</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css" />
+  <title>My Favorite Things</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-    <p>Replace me with your favorite things HTML.</p>
+  <header class="hero">
+    <h1>Favorite Things</h1>
+  </header>
+
+  <main>
+    <section id="intro" class="intro">
+      <p>This is a list of five of my favorite things. Click on a button to see what some of my favorite things are. Click <a id="open" class="link">this</a> to see how it works.</p>
+    </section>
+
+    <section id="things" class="things"></section>
+
+  </main>
+
+    <div id="overlay" class="overlay hidden">
+      <section>
+        <h2>How it works:</h2>
+        <p>There are two main functions for this page: <code>getThing</code> and <code>button</code>. One gets the data from a JSON file and builds the html structure for each object. The other turns the anchor tags from the first function into buttons to show and hide each favorite thing category.</p>
+        <p>The <code>getThing</code> function uses a <code>for...of</code> loop to get each JSON object. The variable <code>id</code> uses the category name to assign a unique ID to each article. If there is an image value, <code>bg</code> is assigned a background image property using the image. A button for each JSON object is appended to the <code>#intro</code> section, an article for each is appended to the <code>#things</code> section, and two sections are appended to each of those articles. The first section gets a background image from <code>bg</code> and a title from the name value. The second section contains the description value of the object.</p>
+        <p>The second function, <code>button</code>, looks for anchor tags with an ID created from the <code>getThing</code> function. It uses a regular expression to match a button's ID with an article's ID. On click it 1: toggles <code>.active</code> on the button, 2: removes <code>.active</code> from other buttons, 3: toggles <code>.hidden</code> on the matching article, and 4: adds <code>.hidden</code> to other articles.</p>
+        <p>The last bit is to open and close this menu. Press <i>escape</i> or click:</p>
+        <a id="esc" class="link">Close</a>
+      </section>
+    </div>
+
+  <footer><!-- Maybe I want stuff in a footer, maybe. --></footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" language="javascript" src="script.js"></script>
 
 </body>
+
 </html>
